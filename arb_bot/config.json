@@ -1,0 +1,50 @@
+{
+  "mode": "paper",
+  "pairs_file": "pairs.json",
+  "log_level": "INFO",
+  "feeds": {
+    "orderbook_depth": 10,
+    "backoff_initial_s": 1.0,
+    "backoff_max_s": 60.0,
+    "backoff_reset_after_s": 30.0,
+    "kalshi_env": "prod"
+  },
+  "fees": {
+    "kalshi": {
+      "taker_coefficient": 0.07,
+      "maker_coefficient": 0.0175,
+      "fee_cap_per_contract": 0.07,
+      "sp500_nasdaq_multiplier": 0.5,
+      "sp500_nasdaq_ticker_prefixes": ["KXSPX", "KXNDX"]
+    },
+    "polymarket": {
+      "categories": {
+        "politics":    {"taker": 0.040, "maker": 0.000},
+        "crypto":      {"taker": 0.072, "maker": 0.000},
+        "sports":      {"taker": 0.030, "maker": 0.000},
+        "economics":   {"taker": 0.015, "maker": 0.000},
+        "geopolitics": {"taker": 0.000, "maker": 0.000},
+        "default":     {"taker": 0.040, "maker": 0.000}
+      },
+      "maker_rebate_daily_usdc": true
+    }
+  },
+  "execution": {
+    "order_type": "FOK",
+    "min_profit_per_contract": 0.015,
+    "max_contracts_per_trade": 100,
+    "max_exposure_per_pair": 500.00,
+    "max_total_exposure": 5000.00,
+    "max_daily_loss": 100.00,
+    "simultaneous_legs": true
+  },
+  "risk": {
+    "kill_switch_file": "KILL_SWITCH",
+    "max_leg_fill_wait_seconds": 5,
+    "unwind_on_partial_fill": true
+  },
+  "paper": {
+    "starting_balance": 10000.00,
+    "log_file": "paper_trades.json"
+  }
+}

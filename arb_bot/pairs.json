@@ -1,0 +1,37 @@
+{
+  "pairs": [
+    {
+      "id": "fed-jun-2026",
+      "type": "binary",
+      "kalshi": {
+        "ticker": "KXFED-26JUN-T5.25"
+      },
+      "poly_category": "economics",
+      "polymarket": {
+        "yes_token": "21742633143463906290569050155826241533067272736897614950488156847949938836455",
+        "no_token": "48331043336612883890938759509493159234755048973500640148014422747788308965732"
+      }
+    },
+    {
+      "id": "fed-jun-2026-partition",
+      "type": "partition",
+      "poly_category": "economics",
+      "kalshi": {
+        "tickers": [
+          {"ticker": "KXFED-26JUN-T5.50", "label": "50bp cut"},
+          {"ticker": "KXFED-26JUN-T5.25", "label": "25bp cut"},
+          {"ticker": "KXFED-26JUN-T5.00", "label": "no change"},
+          {"ticker": "KXFED-26JUN-T4.75", "label": "25bp hike"}
+        ]
+      },
+      "polymarket": {
+        "outcomes": [
+          {"yes_token": "111", "no_token": "222", "label": "50bp cut"},
+          {"yes_token": "333", "no_token": "444", "label": "25bp cut"},
+          {"yes_token": "555", "no_token": "666", "label": "no change"},
+          {"yes_token": "777", "no_token": "888", "label": "25bp hike"}
+        ]
+      }
+    }
+  ]
+}
